@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	Accueil
+{% endblock %}
+
+{% block contenu %}
+	<form action="index.php?page=inscrire" method="post" enctype="application/x-www-form-urlencoded">
+		<h1>Enregistrer L'actualité</h1>
+		<label for="inputIdActu" class="sr-only">idActu:</label>
+		<input type="entier" id="inputIdActu" name="inputIdActu" class="form-control" placeholder="id" required autofocus>
+		<label for="inputIdActu" class="sr-only">titre</label>
+		<input type="text" id="inputIdActu" name="inputinputIdActu" class="form-control" placeholder="inputIdActu" required>
+		<label for="inputContenue" class="sr-only">contenue</label>
+		<input type="text" id="inputContenue" name="inputContenue" class="form-control" placeholder="Contenue" required>
+		<button class="btn btn-lg btn-primary btn-block" type="submit" name="btEnvoyer">envoyer</button>
+	</form>
+
+{% endblock %}
